@@ -1,0 +1,18 @@
+# IDEs, OS, etc
+.DS_Store
+.vscode
+.idea
+.python-version
+
+# Python and Jupyter
+.ipynb_checkpoints
+__pycache__
+
+# dev files
+dev.ipynb
+
+# pkl files
+*.pkl
+
+# data file
+company_collection.json
