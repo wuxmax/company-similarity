@@ -164,7 +164,7 @@ class CompanyMatcher:
         not_located_companies = [company_url for company_url in self.companies
                                  if company_url not in self.headquarters_locations]
 
-        not_located_companies = []  # DEBUGGING
+        # not_located_companies = []  # DEBUGGING
 
         if not_located_companies:
             logger.info("Geo-locating company headquarters...")
@@ -192,7 +192,7 @@ class CompanyMatcher:
         max_founding_year = max(company_founding_years)
         self._founding_year_normalizer = max_founding_year - min_founding_year
 
-    # function is to inefficient for datasets with more than a few hundred entries
+    # function is too inefficient for datasets with more than a few hundred entries
     # def _calc_hq_location_normalizer(self):
     #     location_pairs = combinations(self.headquarters_locations.values(), 2)
     #     location_distances = [geodesic(location_pair[0], location_pair[1]).kilometers
